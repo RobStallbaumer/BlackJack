@@ -71,7 +71,6 @@ namespace BlackJack
             uxHit.Enabled = true;
             uxStand.Enabled = true;
             uxHit.Visible = true;
-            uxBetUpDown.ReadOnly = true;
             uxStand.Visible = true;
             UpdateHands();
         }
@@ -93,6 +92,9 @@ namespace BlackJack
             uxDCard3.Text = dealerHand.Pop();
             uxDCard2.Text = dealerHand.Pop();
             uxDCard1.Text = dealerHand.Pop();
+
+            uxPPoints.Text = Convert.ToString(game.GetScore(game.Player.Hand));
+            uxDPoints.Text = Convert.ToString(game.GetScore(game.Dealer.Hand));
         }
 
         
